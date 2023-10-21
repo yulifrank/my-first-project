@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="./game/game.css">
+<head>
+  <title>Pride Game Registration</title>
+  <style>
+    body {
+      background-image: url("./brick-wall-white-embroidery-dab-color-spray-colorful-background-wallpaper-1920x1080_48.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class="form-container">
+    <h2>Game Registration</h2>
+    <a href="./intreduction.html"> הוראות המשחק</a>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <div id="name-error" class="error-message"></div>
+      <label for="family">Family:</label>
+      <input type="text" id="family" name="family" required>
+      <div id="family-error" class="error-message"></div>
+      <label for="id-card">Identity Card:</label>
+      <input type="text" id="id-card" name="id-card" required>
+      <div id="id-card-error" class="error-message"></div>
+
+      <button type="submit">Enter the Game</button>
+    </form>
+  </div>
+  <audio id="gameAudio" src="./energetic-music-dance-background-hip-hop-latin-reggaeton-150280.mp3"></audio>
+
+
+  <script>
+    document.getElementById("name").addEventListener("blur", validateName);
+    document.getElementById("family").addEventListener("blur", validateFamily);
+    document.getElementById("id-card").addEventListener("blur", validateIdCard);
+
+    function validateName() {
+
+      var nameInput = document.getElementById("name");
+      var nameError = document.getElementById("name-error");
+      if (nameInput.value === "") {
+        nameError.textContent = "Name is required";
+      } else {
+        nameError.textContent = "";
+      }
+    }
+
+    function validateFamily() {
+      var familyInput = document.getElementById("family");
+      var familyError = document.getElementById("family-error");
+      if (familyInput.value === "") {
+        familyError.textContent = "Family is required";
+      } else {
+        familyError.textContent = "";
+      }
+    }
+
+    function validateIdCard() {
+      var idCardInput = document.getElementById("id-card");
+      var idCardError = document.getElementById("id-card-error");
+      if (idCardInput.value === "") {
+        idCardError.textContent = "Identity Card is required";
+      } else {
+        idCardError.textContent = "";
+      }
+    }
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      validateName();
+      validateFamily();
+      validateIdCard();
+      setPlayerData();
+      window.location.href = "./game/game.html";
+
+    });
+
+      function setPlayerData() {
+  var playerName = document.getElementById("name").value;
+  let playerFamily = document.getElementById("family").value;
+  let playerData = {
+    name: playerName,
+    family: playerFamily,
+    score: 0
+  };
+  localStorage.setItem("player", JSON.stringify(playerData));
+}
+
+  </script>
+</body>
+
+</html>

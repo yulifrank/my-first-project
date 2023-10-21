@@ -1,0 +1,217 @@
+body {
+    background-image: url("./images&mp3/brick-wall-white-embroidery-dab-color-spray-colorful-background-wallpaper-1920x1080_48.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /*  לרספונסיביות לעשות את זה:background-size: contain;*/
+    background-repeat: no-repeat;
+  }
+
+  #gameContainer {
+    position: relative;
+    width: 800px;
+    height: 550px;
+    margin: auto;
+    margin-top: 8%;
+  }
+
+
+  #row1,
+  #row2,
+  #row0,
+  #row3 {
+    margin-top: 20px;
+    display: flex;
+  }
+
+  #ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 275px;
+    left: 290px;
+    z-index: 10;
+    display: none;
+    background-image: url("./images&mp3/balll.png");
+    box-shadow: inset 2px,4px black ;
+
+  }
+
+  #paddle {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 530px;
+    left: 250px;
+    display: none;
+    background-image: url("./images&mp3/puddle.png");
+    border-radius: 10px;
+
+  }
+
+  #gamerisult {
+    color: #0000ba;
+    text-shadow: 4px 4px rgb(133, 51, 92);
+    font-size: 10vw;
+    margin-left: 22vw;
+    margin-top: 70px;
+    display: none;
+    top: 30%;
+
+  }
+
+  @keyframes ole {
+    0% {
+      margin-bottom: -2vw
+    }
+
+    100% {
+      margin-bottom: 20vw
+    }
+  }
+
+  #allbricks {
+    margin-top: 10%;
+    position: relative;
+  }
+
+  .brick {
+    width: 130px;
+    height: 45px;
+    margin: 3px;
+    margin-top: 14px;
+    opacity: 50% border 2px solid white;
+    border-radius: 12px;
+    background-image: url("./images&mp3/st.png");
+    border: solid rgba(32, 32, 30, 0.83);
+
+  }
+
+  #choose {
+    display: flex;
+    margin-left: 25%;
+    margin-top: 5%;
+    font-size: 30%;
+  }
+
+  #ch {
+    margin-top: 10%;
+    color: #0000ba;
+    text-shadow: 4px 4px rgb(255, 0, 128);
+    text-align: center;
+    font-size: 6vw;
+  }
+
+  .levels {
+    background-image: url("./images&mp3/brick-wall-white-embroidery-dab-color-spray-colorful-background-wallpaper-1920x1080_48.jpg");
+    border: none;
+    height: 70px;
+    width: 20%;
+    border-radius: 15px;
+    margin-left: 2%;
+    font-size: 1000%;
+    cursor: pointer;
+    opacity: 80%;
+    color: #ff0073d6;
+    text-shadow: 2px 1px rgb(21, 0, 255);
+
+    margin-top: 3%;
+  }
+
+  .levels:hover {
+    color: rgb(21, 0, 255);
+    text-shadow: 2px 1px #ff0090;
+    opacity: 70%;
+  }
+
+  #score {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    color: #a20056;
+    color: #001cba;
+    text-shadow: 2px 2px rgb(255, 0, 128);
+  }
+
+
+
+
+
+
+
+
+
+  
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.532);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .form-container h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #1f5099;
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .form-container input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #1f5099;
+    border-radius: 3px;
+  }
+
+  .form-container button {
+    padding: 10px 20px;
+    background: #1f5099;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .form-container button:hover {
+    background: #012545;
+  }
+
+  .error-message {
+    color: rgb(255, 0, 115);
+    margin-top: 5px;
+  }
+
+  a {
+    text-align: center;
+    direction: rtl;
+    position: absolute;
+    height: 10%;
+    width: 8%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-decoration: none;
+    padding: auto;
+    margin-left: 50%;
+    padding: 10px 20px;
+    background: #1f5099;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+  }
+  a:hover {
+    background: #003563;
+  }
